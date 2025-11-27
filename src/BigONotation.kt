@@ -26,6 +26,26 @@ fun bigOlogn(n: Int){
     }
 }
 
+fun bigONFactorial(n: Int){
+    if (n == 1){
+        println(1)
+        return
+    }
+    for (i in 1..n){
+        println(i)
+        bigONFactorial(n-1) //recursive func
+    }
+}
+
+fun calculateFactorial(n: Int): Int{
+    if (n == 1 || n == 0){
+        return 1
+    }else if (n<0){
+        throw NumberFormatException("n can not be negative")
+    }
+    return n.times(calculateFactorial(n -1))
+}
+
 fun main(){
     println("O(1)")
     bigO1(8) // O(1)
@@ -38,4 +58,10 @@ fun main(){
 
     println("O(log n)")
     bigOlogn(8) // O(log n)
+
+    println("O(n!)")
+    bigONFactorial(8) // O(n!)
+
+    println("Calculate Factorial")
+    println(calculateFactorial(5)) // O(n)
 }
