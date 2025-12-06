@@ -15,7 +15,7 @@ package algorithms.easy
  * The element 1 occurs at the indices 0 and 3.
  * */
 
-
+// O(n)
 fun containsDuplicate(nums: IntArray): Boolean {
     val tempHashSet = hashSetOf<Int>()
     nums.forEach {
@@ -25,6 +25,7 @@ fun containsDuplicate(nums: IntArray): Boolean {
     return tempHashSet.size != nums.size
 }
 
+// O(n log n)
 fun containsDuplicateWithSorting(nums: IntArray): Boolean {
     nums.sort()
     for (i in 0 until nums.size - 1) {
