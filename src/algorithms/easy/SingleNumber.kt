@@ -63,6 +63,7 @@ fun singleNumber(nums: IntArray): Int {
  * 000 = 0
  *
  * As a result, numbers that are the same after the XOR operation cancel each other out.
+ * This solution knows as Bit Manipulation
  * */
 
 // O(n) Space: O(1)
